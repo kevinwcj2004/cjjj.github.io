@@ -1,0 +1,130 @@
+<!-- check how to get data using third party apps -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <h1>NBA Survey Form</h1>
+    <p><i>We appreciate the time you've taken to complete this form.</i></p>
+    <form id="box" action="https://formspree.io/f/xpzbbaeb" method="POST">
+      <fieldset class="personal">
+        <label
+          >Name
+          <input
+            name="respondent_name"
+            placeholder="Enter Your Name"
+            minlength="3"
+            type="text"
+            required
+          />
+        </label>
+        <label
+          >Email
+          <input
+            name="respondent_email"
+            placeholder="Enter Your Email"
+            type="email"
+            required
+          />
+        </label>
+        <label
+          >Height in cm (optional)<input
+            name="respondent_height"
+            type="number"
+            min="1"
+            max="200"
+            placeholder="198"
+          />
+        </label>
+      </fieldset>
+      <!-- new fieldset -->
+      <fieldset class="nba">
+        <label
+          >Which team is winning the championship?
+          <select name="Team in favour">
+            <option value="Didn't select">Select One</option>
+            <option value="Miami Heat">Miami Heat</option>
+            <option value="Boston Celtics">Boston Celtics</option>
+            <option value="Golden State Warriors">Golden State Warriors</option>
+            <option value="Dallas Mavericks">Dallas Mavericks</option>
+          </select>
+        </label>
+        <label
+          >Who's your favourite player from that team?<input
+            name="favourite_player"
+            placeholder="Jayson Tatum"
+            type="text"
+          />
+        </label>
+        <label
+          >How much are you going to bet on your team?
+          <label
+            ><input
+              type="radio"
+              name="bet"
+              value="$1-$100"
+              checked
+            />$1-$100</label
+          >
+          <label
+            ><input type="radio" name="bet" value="$101-$200" />$101-$200</label
+          >
+          <label
+            ><input type="radio" name="bet" value="$201-$300" />$201-$300</label
+          >
+          <label
+            ><input type="radio" name="bet" value="$301-$400" />$301-$400</label
+          >
+          <label
+            ><input type="radio" name="bet" value="$401-$500" />$401-$500</label
+          ><label><input type="radio" name="bet" value="Higher" />Higher</label>
+        </label>
+        <label
+          >Which NBA players suck right now? (Check all that apply)
+          <label
+            ><input type="checkbox" name="James Harden" checked />James
+            Harden</label
+          >
+          <label
+            ><input type="checkbox" name="Ben Simmons" checked />Ben
+            Simmons</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Everybody in the Bucks except
+            Giannis during game 7"
+              checked
+            />Everybody in the Bucks except Giannis during game 7</label
+          >
+        </label>
+      </fieldset>
+      <fieldset class="extra">
+        <label
+          >Do you have anything you want to say?
+          <textarea
+            name="respondent_message"
+            rows="5"
+            cols="50"
+            placeholder="I wish cp3 wins a ring one day..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
